@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A book recommender app that suggests books based on user ratings."
+    />
+    <meta name="author" content="Nick Clouse" />
+    <meta name="keywords" content="books, recommendations, ratings, reviews" />
+
+    <title>Book Recommender</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <!-- Nav bar -->
+    <nav class="navbar">
+      <div>Book Reccommender</div>
+      <ul>
+        <li>By Nick Clouse</li>
+      </ul>
+    </nav>
+
+    <!-- Text Container -->
+    <div id="container">
+      <h2>Search for a book!</h2>
+      <div id="textContainer">
+        <p>
+          Type the name of a book below and select it from the dropdown menu.
+        </p>
+        <p>
+          Then, click the button to receive book recommendations related to your
+          selection!
+        </p>
+      </div> 
+
+      <!-- Form for getting book reccommendations -->
+      <form id="bookForm">
+        <input
+          type="text"
+          id="searchBox"
+          list="suggestions"
+          placeholder="Search for a book..."
+          autocomplete="off"
+        />
+        <datalist id="suggestions"> </datalist>
+        <button id="submitBtn" type="submit">Get Recommendations</button>
+      </form>
+
+      <!-- Used to display any error messages that occur -->
+      <p id="errorMsg"></p>
+
+      <!-- Displays recommended books -->
+      <div id="bookGrid" class="grid-container"></div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>  
+  </body>
+</html>
