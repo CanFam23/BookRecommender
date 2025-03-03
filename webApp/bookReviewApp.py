@@ -1,4 +1,4 @@
-from flask import Flask, render_template,request,jsonify
+from flask import Flask, render_template,request,jsonify, url_for
 import pandas as pd
 from reviewer import recommendBooks
 
@@ -31,6 +31,12 @@ def submit():
     if not bookList or not df:
         response_message = {"message":f"No book in dataset title '{name}'"}
         return jsonify(response_message)
+    
+    # If the book doesn't have a image link, put the placeholder image in its place
+    for book in df:
+        if not book["image"]:
+            # Generates file path for image dynamically
+            book["image"] = url_for('static', filename='placeholder.png', _external=True)
     
     return jsonify({"bookList":bookList,"bookData":df})
 
