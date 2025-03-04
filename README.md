@@ -12,7 +12,7 @@ By Nick Clouse
 ## Description  
 This project is a book recommendation system that utilizes multiple data processing and machine learning techniques to recommend books based on user input.  
    
-It uses TF-IDF for text vectorization, converting book details into numerical features, and cosine similarity to measure the similarity between books. Sentiment analysis is used to determine the emotional tone of reviews, which feeds into a logistic regression model along with the review's text porition that predicts book ratings. The system also includes stopword removal to clean text data, sparse matrices for efficient storage, and majority voting to predict book ratings based on the most frequent review scores.
+It uses TF-IDF for text vectorization, converting book details into numerical features, and cosine similarity to measure the similarity between books. Sentiment analysis determines the emotional tone of reviews, which, along with the review text, is fed into a logistic regression model to predict book ratings. The system also includes stopword removal to clean text data, sparse matrices for efficient storage, and majority voting to predict book ratings based on the most frequent review scores.
 
 ## Installation  
 
@@ -63,7 +63,7 @@ For configuration, the data sets should be placed in a folder named data, which 
 
 ## Usage  
 
-After configuring the project, navigate to the [webApp](webApp) folder and run
+After configuring the project, navigate to the [webApp](webApp/) folder in the command line and run:
 ```bash
 python bookReviewApp.py
 ```
@@ -87,7 +87,8 @@ If that shows, you can navigate to `http://127.0.0.1:5000/` on any browser and y
 
 Start typing the title of a book in the search box, and a list of suggestions will appear. To ensure a successful search, make sure to select a book from the options provided. It may take a few moments for the results to display.
 
-What the page should look like after searching for a book (It'll display up to 9 similar books)
+What the page should look like after searching for a book (It'll display up to 9 similar books):  
+  
 ![Example Image](exampleImg.png)
 
 ## Future To-Do  
