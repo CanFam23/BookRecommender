@@ -86,10 +86,14 @@ Recommender loaded!
 If that shows, you can navigate to `http://127.0.0.1:5000/` on any browser and you are good to go!
 
 Start typing the title of a book in the search box, and a list of suggestions will appear. To ensure a successful search, make sure to select a book from the options provided. It may take a few moments for the results to display.
+
+What the page should look like after searching for a book (It'll display up to 9 similar books)
+![Example Image](exampleImg.png)
+
 ## Future To-Do  
-- [ ] Improve the UI, could look better
-- [ ] Allow for more books to be used
-- [ ] Improve the recomendation algorithm, as well as the rating prediction algorithm
+- [ ] Improve the UI, it's pretty simple currently
+- [ ] Allow for more books to be used/searched
+- [ ] Improve the recommendation algorithm, as well as the rating prediction algorithm. Some of the recommendations for lesser known books aren't the best, and the predicted ratings aren't always super accurate.
 
 
 ## Contact  
